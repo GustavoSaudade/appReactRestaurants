@@ -33,7 +33,7 @@ function AlignItemsList(props) {
                         <List className={classes.root}>
                             <ListItem alignItems="flex-start">
                                 <ListItemAvatar>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
+                                <Avatar alt="R" src="/static/images/rest1.png" />
                                 </ListItemAvatar>
                                 <ListItemText
                                 primary={name}
@@ -42,7 +42,7 @@ function AlignItemsList(props) {
                                         <Typography component="span" className={classes.inline} color="textPrimary">
                                             {type}
                                         </Typography>
-                                        {" - "+money_rate}
+                                        {" - "+money_rate+" - "+star_rate}
                                     </React.Fragment>
                                 }
                                 />
