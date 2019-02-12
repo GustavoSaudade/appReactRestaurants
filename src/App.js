@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import AppBar from './components/AppBar';
 import './App.css';
 import './bootstrap.css';
 
@@ -18,6 +19,7 @@ class App extends React.Component {
     const { isLoading, restaurants } = this.state;
     return (
       <React.Fragment>
+        <AppBar />
         <div>
           {!isLoading ? (
             restaurants.map(restaurant => {
