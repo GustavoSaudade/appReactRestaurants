@@ -13,7 +13,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.getUsers();
+    this.getRestaurants();
   }
 
   render() {
@@ -34,7 +34,7 @@ class App extends React.Component {
     );
   }
 
-  getUsers() {
+  getRestaurants() {
     let data = JSON.stringify({
       password: '',
       username: ''
