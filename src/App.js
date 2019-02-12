@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import AppBar from './components/AppBar';
+import RestaurantsList from './components/RestaurantsList';
 import './App.css';
 import './bootstrap.css';
 
@@ -22,23 +23,9 @@ class App extends React.Component {
         <AppBar />
         <div>
           {!isLoading ? (
-            restaurants.map(restaurant => {
-              const { id, name, type, money_rate, star_rate } = restaurant;
-              return (
-                <div key={id}>
-                
-                  <ul className="list-group">
-                    <li className="list-group-item list-group-item-success">
-                      <div>{name}</div>
-                      <div>{type}</div>
-                      <div>{money_rate}</div>
-                      <div>{star_rate}</div>                    
-                    </li>
-                  </ul>
-
-                </div>
-              );
-            })
+            <div>
+              <RestaurantsList rest={this.state.restaurants}/>
+            </div>
           ) : (
             <p>Loading...</p>
           )}
@@ -51,7 +38,7 @@ class App extends React.Component {
     let data = JSON.stringify({
       password: '',
       username: ''
-  });
+    });
     // We're using axios instead of Fetch
     axios
       // The API we're requesting data from
